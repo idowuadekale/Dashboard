@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Mode</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Icon.png">
+    <style>
+        body {
+            background-color: #343d50;
+            font-family: Helvetica, sans-serif;
+            animation-name: example;
+            animation-duration: 55s;
+        }
+        /* Standard syntax */
+        
+        @keyframes example {
+            from {
+                background-color: #222047;
+            }
+            to {
+                background-color: #523324;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <span class="tog" onclick="openNav()" title="Open Sidebar">&#9776; </span>
+            <h3 class="glow">Developers Tips</h3>
+            <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">GitHub</a>
+            <div class="chip">
+                <img src="../images/id.jpg" alt="Person" width="96" height="96">
+                <a href="./about.html"> About</a>
+            </div>
+        </div>
+        <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">⬆</button>
+
+
+        <div class="timeline">
+            <div class="container-time left-t">
+                <div class="content-time">
+                    <h2>Focus on the Fundamentals</h2>
+                    <p>
+                        The information you learn at the beginning of your programming education or coding bootcamp (/coding/) will allow you to grasp the logic of more complicated topics further along.
+                        <br> If you don’t learn basic computer programming, you could fall behind in the future.
+                        <br> So, even if the fundamentals seem boring or unimportant at first, you need to recognize how essential it is to learn them.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time right-t">
+                <div class="content-time">
+                    <h2>Learn to Ask for Help</h2>
+                    <p>
+                        Knowing when to ask for help is a skill you’ll need throughout the course of your life, not just in your coding career.
+                        <br> The fact of the matter is, you aren’t going to know everything, especially when you’re just starting out.
+                        <br> The fastest and easiest way to gain the skills you need to have for a successful coding career is to ask those who have the answers.
+                        <br> After you try to figure out the answer to your question on your own, be sure to ask someone else.
+                        <br> Whether you do it in person or online, speaking to your mentor or teacher and listening to what they have to say is critical when you are learning to become a computer programmer.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time left-t">
+                <div class="content-time">
+                    <h2>Put Your Knowledge into Action</h2>
+                    <p>
+                        If you really want to learn how to code (/resources/coding/),
+                        <br> you need to do more than just read the book and take some notes — you need to put the information you’re learning into action.
+                        <br> You might be surprised at how something you read can seem so simple until you try to do it for yourself.
+                        <br> Therefore, you should actually start coding as you’re learning. That way, you put the information to use immediately.
+                        <br> When you learn by doing, the information will be more likely to stick with you.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time right-t">
+                <div class="content-time">
+                    <h2>Learn How to Code by Hand</h2>
+                    <p>
+                        It might seem old school, but if you want to succeed in computer programming, especially if you are seeking a coding career.
+                        <br> Learning to code by hand is one of the most important skills you can learn.
+                        <br> First of all, it will make you a better coder because you’ll have to be more intentional
+                        <br> you won’t be able to run your code halfway through to see if it works. This results in an increased level of precision.
+                        <br> But learning to code by hand doesn’t just improve your skills; it can also help you get a job and jumpstart your coding career.
+                        <br> Employers looking to hire computer programmers often require applicants to take a coding test that involves coding by hand. Therefore, it’s essential that you acquire this skill.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time left-t">
+                <div class="content-time">
+                    <h2>Check Helpful Online Coding Resources</h2>
+                    <p>
+                        These days, you can find countless sources of information on the internet on just about any topic.
+                        <br> This information can be especially helpful when you are learning how to code.
+                        <br> Whether you decide to sign up for a coding boot camp or simply want to check out free tutorials on YouTube or other streaming services, you can learn a lot about coding by just going online.
+                        <br> One of the main benefits of learning this way is that you can find the answers you need in many different formats.
+                        <br> Therefore, if one explanation doesn’t make sense to you, you can always find a different explanation elsewhere.
+                        <br> Seeking out additional resources on becoming a computer programmer will help you take your coding career to the next level.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time right-t">
+                <div class="content-time">
+                    <h2>Know When to Step Away and Take a Break from Code</h2>
+                    <p>
+                        Debugging Debugging can be one of the most frustrating processes when you are learning how to code.
+                        <br> After all, it can take hours to find a bug, and you can easily lose your sense of time when you are trying to fix the problem.
+                        <br> This can lead you to feeling overwhelmed or stressed, so you need to learn when to step away from the bug and take a break.
+                        <br> Try doing something you find enjoyable, like reading, cooking, or exercising. Taking this step will allow you to clear your mind enough to go back to the bug with a renewed sense of focus.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time left-t">
+                <div class="content-time">
+                    <h2>Do More Than Just Read Sample Code</h2>
+                    <p>
+                        When you get your hands on sample code, it’s easy to just read through it and think you have an understanding of what’s going on.
+                        <br> But when you really want to become a computer programmer, you’re going to have to take this a step further.
+                        <br> You should actually run the code and tinker with it to figure out how it truly works.
+                        <br> This is a much more effective way to learn than simply reading through the code. Remember, being able to read the code isn’t the same as understanding it.
+                        <br> To start a successful coding career (/blog/category/coding-careers/), you need to cultivate a deep level of understanding, and playing around with sample code is a great way to do that.
+                    </p>
+                </div>
+            </div>
+            <div class="container-time right-t">
+                <div class="content-time">
+                    <h2>Conclusion</h2>
+                    <p>
+                        Learning how to code is exciting and even a bit daunting at first.
+                        <br> But when you choose the right coding boot camp or educational program and apply these tips, you’re going to get all the information and skills you need to start a prolific coding career.
+                        <br> Remember that every coder struggles a bit when they’re first starting out, and you shouldn’t expect anything different from yourself.
+                        <br> It’s simply part of the learning process. But if you stick to it, and you’ll learn these skills faster than you ever thought possible.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <button onclick="closeNav()" title="Close Sidebar">&times;</button>
+        <div id="time"></div>
+        <hr>
+        <div class="profile">
+            <img src="../images/id.jpg" alt="Developer" title="Software Engineer">
+            <h3>Idowu Adekale</h3>
+            <p>Developer 🌊</p>
+        </div>
+        <ul>
+            <li>
+                <a href="./Home.html">
+                    <span class="item"> 🏡 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Demo.html">
+                    <span class="item"> 💻 Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="./slideshow.html">
+                    <span class="item"> 🌏 Slideshow</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Projects.html">
+                    <span class="item"> 📙 My Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Index.html">
+                    <span class="item"> 📝 Form</span>
+                </a>
+            </li>
+            <li>
+                <a href="./View.html" class="active">
+                    <span class="item"> 🎥 View Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="./about.html">
+                    <span class="item"> 🏢 Profile</span>
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </div>
+
+
+
+    <script>
+        // ################################################################## Top button Code
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunctionBtn() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

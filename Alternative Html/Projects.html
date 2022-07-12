@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Best.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <span class="tog" onclick="openNav()" title="Open Sidebar">&#9776; </span>
+            <h3 class="glow">My Projects</h3>
+            <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">GitHub</a>
+            <div class="chip">
+                <img src="../images/id.jpg" alt="Person" width="96" height="96">
+                <a href="./about.html"> About</a>
+            </div>
+        </div>
+        <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">&#8687</button>
+
+        <div class="row-blog">
+            <div class="leftcolumn-blog">
+                <div class="card-blog">
+                    <h2>My Projects</h2>
+                    <h5>My Personal Project, 2020, Till date</h5>
+                    <div class="Ball-run">👊</div>
+
+                    <div class="fakeimg">
+                        <div class="row-pro">
+                            <div class="column-pro">
+                                <div class="card-pro">
+                                    <h3>Dashboard</h3>
+                                    <p>Some text</p>
+                                    <p>Some text</p>
+                                </div>
+                            </div>
+
+                            <div class="column-pro ">
+                                <div class="card-pro">
+                                    <h3>Calculator</h3>
+                                    <p>Some text</p>
+                                    <p>Some text</p>
+                                </div>
+                            </div>
+
+                            <div class="column-pro">
+                                <div class="card-pro">
+                                    <h3>Others</h3>
+                                    <p>Some text</p>
+                                    <p>Some text</p>
+                                </div>
+                            </div>
+
+                            <div class="column-pro">
+                                <div class="card-pro">
+                                    <h3>Website</h3>
+                                    <p>Some text</p>
+                                    <p>Some text</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <img src="../images/id.jpg" alt="Developer" title="Software Engineer" class="project-img">
+                        <h3>Idowu Adekale</h3>
+                        <p>Developer 🌊</p>
+                    </div>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div> <br>
+                <div class="card-blog">
+                    <h2>My Codes</h2>
+                    <h5>My other code, and more...</h5>
+                    <div class="fakeimg">
+                        <div class="row-pro">
+                            <div class="column-pro">
+
+                                <span class="rotation-div">
+                                        <div onmouseover="rotateDIV()" id="rotate2D" style="transform: rotate(360deg);">HELLO!</div> 
+                                        <div onmouseover="rotateYDIV()" id="rotate3D" class="rotate-left">Hey!</div>
+                                        <div class="animated_div">Welcome!</div>
+                                 </span>
+
+                            </div>
+                        </div>
+                    </div>
+                    <p>Some text..</p>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-blog">
+            <h5>&#169 All right reserved, 2022.</h5>
+        </div>
+
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <button onclick="closeNav()" title="Close Sidebar">&times;</button>
+        <div id="time"></div>
+        <hr>
+        <div class="profile">
+            <img src="../images/id.jpg" alt="Developer" title="Software Engineer">
+            <h3>Idowu Adekale</h3>
+            <p>Developer 🌊</p>
+        </div>
+        <ul>
+            <li>
+                <a href="./Home.html">
+                    <span class="item"> 🏡 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Demo.html">
+                    <span class="item"> 💻 Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="./slideshow.html">
+                    <span class="item"> 🌏 Slideshow</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Projects.html" class="active">
+                    <span class="item"> 📙 My Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Index.html">
+                    <span class="item"> 📝 Form</span>
+                </a>
+            </li>
+            <li>
+                <a href="./View.html">
+                    <span class="item"> 🎥 View Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="./about.html">
+                    <span class="item"> 🏢 Profile</span>
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </div>
+
+    <script>
+        // ################################################################## Top button Code
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunctionBtn() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+        //  ############################# Rotate 2D and 3D
+
+        var x, y, n = 0,
+            ny = 0,
+            rotINT, rotYINT
+
+        function rotateDIV() {
+            x = document.getElementById("rotate2D")
+            clearInterval(rotINT)
+            rotINT = setInterval("startRotate()", 10)
+        }
+
+        function rotateYDIV() {
+            y = document.getElementById("rotate3D")
+            clearInterval(rotYINT)
+            rotYINT = setInterval("startYRotate()", 10)
+        }
+
+        function startRotate() {
+            n = n + 1
+            x.style.transform = "rotate(" + n + "deg)"
+            x.style.webkitTransform = "rotate(" + n + "deg)"
+            x.style.OTransform = "rotate(" + n + "deg)"
+            x.style.MozTransform = "rotate(" + n + "deg)"
+            if (n == 180 || n == 360) {
+                clearInterval(rotINT)
+                if (n == 360) {
+                    n = 0
+                }
+            }
+        }
+
+        function startYRotate() {
+            ny = ny + 1
+            y.style.transform = "rotateY(" + ny + "deg)"
+            y.style.webkitTransform = "rotateY(" + ny + "deg)"
+            y.style.OTransform = "rotateY(" + ny + "deg)"
+            y.style.MozTransform = "rotateY(" + ny + "deg)"
+            if (ny == 180 || ny >= 360) {
+                clearInterval(rotYINT)
+                if (ny >= 360) {
+                    ny = 0
+                }
+            }
+        }
+    </script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

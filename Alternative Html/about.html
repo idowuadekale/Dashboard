@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Icon.png">
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        /* Check for the Styles in the Style.css */
+    </style>
+
+</head>
+
+<body onload="checkCookie()">
+    <div id="main">
+        <div class="navbar">
+            <span class="tog" onclick="openNav()" title="Open Sidebar">&#9776; </span>
+            <h3 class="glow">Ending Profile</h3>
+            <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">GitHub</a>
+            <div class="chip">
+                <img src="../images/id.jpg" alt="Person" width="96" height="96">
+                <a href="../Alternative Html/Home.html"> Home</a>
+            </div>
+        </div>
+        <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">⬆</button>
+
+        <div class="bg-image"></div>
+
+        <div class="bg-text">
+            <h2>Personnal Profile</h2>
+            <h1 style="font-size:50px">I'm an Intern Software Engineer</h1>
+            <p>And I'm Idowu Adekale by name💋. </p>
+        </div>
+
+        <div class="code-container">
+            <h2>Technical Skills</h2>
+            <p>HTML</p>
+            <div class="container-code">
+                <div class="skills html">95%</div>
+            </div>
+
+            <p>CSS</p>
+            <div class="container-code">
+                <div class="skills css">90%</div>
+            </div>
+
+            <p>SQL</p>
+            <div class="container-code">
+                <div class="skills sql">80%</div>
+            </div>
+
+            <p>JavaScript</p>
+            <div class="container-code">
+                <div class="skills js">70%</div>
+            </div>
+
+            <p>C#</p>
+            <div class="container-code">
+                <div class="skills c-sharp">60%</div>
+            </div>
+
+            <p>Asp.net</p>
+            <div class="container-code">
+                <div class="skills asp">50%</div>
+            </div>
+
+            <p>PHP</p>
+            <div class="container-code">
+                <div class="skills php">40%</div>
+            </div>
+        </div>
+        <div class="callout">
+            <div class="callout-header">Welcome!</div>
+            <span class="closebtn-callout" onclick="this.parentElement.style.display='none';">×</span>
+            <div class="callout-container">
+                <p>You can check my Github Page.<br>
+                    <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">By clicking me</a>
+                    <br> or click the link on the top.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <button onclick="closeNav()" title="Close Sidebar">&times;</button>
+        <div id="time"></div>
+        <hr>
+        <div class="profile">
+            <img src="../images/id.jpg" alt="Developer" title="Software Engineer">
+            <h3>Idowu Adekale</h3>
+            <p>Developer 🌊 </p>
+        </div>
+        <ul>
+            <li>
+                <a href="./Home.html">
+                    <span class="item"> 🏡 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Demo.html">
+                    <span class="item"> 💻 Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="./slideshow.html">
+                    <span class="item"> 🌏 Slideshow</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Projects.html">
+                    <span class="item"> 📙 My Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Index.html">
+                    <span class="item"> 📝 Form</span>
+                </a>
+            </li>
+            <li>
+                <a href="./View.html">
+                    <span class="item"> 🎥 View Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="./about.html" class="active">
+                    <span class="item"> 🏢 Profile</span>
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </div>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toGMTString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var user = getCookie("username");
+            if (user != "") {
+                alert("Welcome again👋\nAmbassador " + user);
+            } else {
+                user = prompt("Please enter your name:", "");
+                if (user != "" && user != null) {
+                    setCookie("username", user, 30);
+                }
+            }
+            var user = getCookie("username").style.color = "red";
+        }
+        // ################################################################## Top button Code
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunctionBtn() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1349 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ################################################################## Top button Code */
+
+
+/* Hover to top button */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: #191970c4;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #000040;
+}
+
+
+/* Sidebar Codes... */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* background-color: rgb(5, 68, 104); */
+    /* background-color: #000040; */
+    background: #191970;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-right: 1px ridge #000;
+}
+
+.sidenav .closebtn:hover,
+.sidenav button:hover {
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #bbb;
+    display: block;
+    transition: 0.3s;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+}
+
+.sidenav button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 30px;
+    color: #bbb;
+    display: block;
+    transition: 0.3s;
+    padding: 1px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px hidden #21252975;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .navbar h3 {
+        margin: 10px;
+    }
+}
+
+
+/* Top Nav Bar */
+
+#main .navbar {
+    height: 70px;
+    background: #000040;
+    width: 100%;
+}
+
+.tog {
+    cursor: pointer;
+    font-size: 30px;
+    padding: 10px;
+    color: #aaa;
+}
+
+.tog:hover {
+    color: #f1f1f1;
+}
+
+#main .navbar .tog,
+#main .navbar h3,
+#main .navbar a,
+#main .navbar .chip {
+    display: inline-block;
+    margin-top: -0.1px;
+    position: absolute;
+}
+
+#main .navbar h3 {
+    font-size: 30px;
+    left: 40%;
+    padding: 10px;
+}
+
+#main .navbar a {
+    color: #aaa;
+    left: 80%;
+    text-decoration: none;
+    margin-top: 25px;
+    border-bottom: #0000ff outset 2px;
+}
+
+#main .navbar a:hover {
+    color: #f1f1f1;
+    font-size: 20px;
+    text-transform: uppercase;
+    border-bottom: #0000ff outset 3px;
+}
+
+.chip {
+    /* display: inline-block; */
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    left: 10%;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#main .navbar .chip a {
+    float: right;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    /* padding: 0 25px; */
+    margin-top: auto;
+    color: #181c1f;
+    left: auto;
+    text-transform: uppercase;
+}
+
+
+/* Profile Code */
+
+.profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidenav .profile img {
+    display: block;
+    width: 100px;
+    height: 150px;
+    border-radius: 20%;
+    margin: 0 auto;
+}
+
+.sidenav .profile h3 {
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.sidenav .profile p {
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+
+/* Time code */
+
+#time {
+    color: #fff;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: -40px;
+    margin-left: -30px;
+}
+
+
+/* Ul and listing Codes */
+
+ul li {
+    list-style-type: none;
+    margin-left: -35px;
+}
+
+.sidenav ul li a {
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #4f5962;
+    color: #c2c7d0;
+    font-size: 16px;
+    position: relative;
+    text-decoration: none;
+}
+
+.sidenav ul li a:hover,
+.sidenav ul li a.active {
+    color: #212529;
+    background: #fff;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.sidenav ul li a:hover:before,
+.sidenav ul li a.active:before {
+    display: block;
+}
+
+
+/* Slide codes */
+
+
+/* Slideshow container */
+
+.Pad-slide {
+    padding: 30px;
+    /* margin: 30px; */
+    background-color: #8A2BE2;
+}
+
+.slideshow-container {
+    position: relative;
+    background: #8A2BE2;
+}
+
+
+/* Slides */
+
+.mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #312d2d;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+
+/* The dot/bullet/indicator container */
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: transparent;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+/* Add a background color to the active dot/circle */
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+
+/* Add an italic font style to all quotes */
+
+q {
+    font-style: italic;
+}
+
+
+/* Add a blue color to the author */
+
+.author {
+    color: cornflowerblue;
+}
+
+
+/* Glowing Text */
+
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3d00e6, 0 0 40px #3d00e6, 0 0 50px #3d00e6, 0 0 60px #3d00e6, 0 0 70px #3d00e6;
+    }
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #4d59ff, 0 0 40px #4d59ff, 0 0 50px #4d59ff, 0 0 60px #4d59ff, 0 0 70px #4d59ff, 0 0 80px #4d59ff;
+    }
+}
+
+
+/* Scrollbar Style Start Here... */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #5a5757;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #000040;
+    border-radius: 1px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #4d59ff;
+}
+
+
+/* View html Style Begin here */
+
+.callout {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    margin-left: 20px;
+    max-width: 300px;
+}
+
+.callout-header {
+    padding: 25px 15px;
+    background: rgba(0, 0, 0, 0.767);
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.callout-container {
+    padding: 15px;
+    background-color: #00008bbd;
+    color: #fff;
+    text-align: center;
+}
+
+.closebtn-callout {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.closebtn-callout:hover {
+    color: #aaa;
+}
+
+.callout .callout-container p a {
+    color: #ddd;
+    text-decoration: overline;
+}
+
+.callout .callout-container p a:hover {
+    color: #00CED1;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* The actual timeline (the vertical ruler) */
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+
+/* Container around content */
+
+.container-time {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+
+/* The circles on the timeline */
+
+.container-time::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+
+/* Place the container to the left */
+
+.left-t {
+    left: 0;
+}
+
+
+/* Place the container to the right */
+
+.right-t {
+    left: 50%;
+}
+
+
+/* Add arrows to the left container (pointing right) */
+
+.left-t::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+
+/* Add arrows to the right container (pointing left) */
+
+.right-t::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+
+/* Fix the circle for containers on the right side */
+
+.right-t::after {
+    left: -16px;
+}
+
+
+/* The actual content */
+
+.content-time {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+
+@media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+        left: 31px;
+    }
+    /* Full-width containers */
+    .container-time {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+    /* Make sure that all arrows are pointing leftwards */
+    .container-time::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+    /* Make sure all circles are at the same spot */
+    .left-t::after,
+    .right-t::after {
+        left: 15px;
+    }
+    /* Make all right containers behave like the left ones */
+    .right-t {
+        left: 0%;
+    }
+}
+
+
+/* About html Style Begins here */
+
+.bg-image {
+    /* The image used */
+    background-image: url("./images/Code6.jpg");
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    /* Full height */
+    height: 900px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Position text in the middle of the page/image */
+
+.bg-text {
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: relative;
+    top: -500px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.pro-container {
+    padding: 2px 16px;
+}
+
+.container-code {
+    width: 100%;
+    background-color: #ddd;
+}
+
+.skills {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.html {
+    width: 95%;
+    background-color: #4CAF50;
+}
+
+.css {
+    width: 90%;
+    background-color: #2196F3;
+}
+
+.js {
+    width: 70%;
+    background-color: #f44336;
+}
+
+.php {
+    width: 40%;
+    background-color: #808080;
+}
+
+.c-sharp {
+    width: 60%;
+    background-color: #9c1010;
+}
+
+.asp {
+    width: 50%;
+    background-color: #2d5a08;
+}
+
+.sql {
+    width: 80%;
+    background-color: #026779;
+}
+
+.code-container {
+    padding: 40px 70px;
+    background-color: #000040;
+    color: #fff;
+    margin-top: -100px;
+}
+
+
+/* Slideshow.html style begins */
+
+
+/* Position the image container (needed to position the left and right arrows) */
+
+.container-slide {
+    position: relative;
+    background-color: #000040;
+}
+
+
+/* Hide the images by default */
+
+.my-Slides {
+    display: none;
+}
+
+
+/* Add a pointer when hovering over the thumbnail images */
+
+.cursor-s {
+    cursor: pointer;
+}
+
+
+/* Next & previous buttons */
+
+.prev-s,
+.next-s {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next-s {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev-s:hover,
+.next-s:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Number text (1/3 etc) */
+
+.number-text {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+
+/* Container for image text */
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row-s:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Six columns side by side */
+
+.column-s {
+    float: left;
+    width: 16.66%;
+}
+
+
+/* Add a transparency effect for thumnbail images */
+
+.demo-s {
+    opacity: 0.6;
+}
+
+.outer {
+    padding: 25px 30px;
+    background-color: #3d00e6;
+    border: 2px groove #3d00e6;
+}
+
+.outer .img1 {
+    filter: none;
+}
+
+.outer .img2 {
+    filter: blur(4px);
+}
+
+.outer .img3 {
+    filter: brightness(250%);
+}
+
+.outer .img4 {
+    filter: contrast(180%);
+}
+
+.outer .img5 {
+    filter: grayscale(100%);
+}
+
+.outer .img6 {
+    filter: hue-rotate(180deg);
+}
+
+.outer .img7 {
+    filter: invert(100%);
+}
+
+.outer .img8 {
+    filter: opacity(50%);
+}
+
+.outer .img9 {
+    filter: saturate(7);
+}
+
+.outer .img10 {
+    filter: sepia(100%);
+}
+
+.outer .img11 {
+    filter: drop-shadow(8px 8px 10px green);
+}
+
+
+/* Home html Table Style */
+
+.pad-Table {
+    padding: 40px 30px;
+    border: 2px solid rgba(34, 34, 34, 0.438);
+    background-color: #474e5d;
+    color: #fff;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #772a2a;
+}
+
+#myTable tr.header,
+#myTable tr:hover {
+    background-color: #9b9595;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-collapse: collapse;
+}
+
+#myTable .table-top {
+    background-color: black;
+    color: white;
+}
+
+.pad-Table .arrange,
+.pad-Table #myInput {
+    display: inline-block;
+}
+
+#myInput {
+    background-image: url('./images/hy.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 50%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+
+.arrange button {
+    padding: 10px 40px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid darkblue;
+    margin: 20px;
+}
+
+.arrange button:hover {
+    background-color: aqua;
+    color: darkblue;
+    text-transform: capitalize;
+}
+
+
+/* ######################################### Demo html Styling Code */
+
+
+/* The grid: Three equal columns that floats next to each other */
+
+.column-demo {
+    float: left;
+    width: 33.33%;
+    padding: 50px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+}
+
+.DemoTab {
+    padding: 20px;
+    color: white;
+    width: 100%;
+    height: 500px;
+}
+
+
+/* Clear floats after the columns */
+
+.row-demo:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Closable button inside the container tab */
+
+.closeDemo {
+    float: right;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+
+/* Project html codes.... */
+
+
+/* Ball-Running Code */
+
+.Ball-run {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    background-color: red;
+    border-radius: 50%;
+    position: relative;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-name: ball-run;
+    -webkit-animation-duration: 5s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    /* Standard syntax */
+    animation-name: ball-run;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Standard syntax */
+
+@keyframes ball-run {
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+/* Rotaion code begins */
+
+#rotate2D {
+    width: 80px;
+    height: 70px;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    float: left;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background: #32CD32;
+    margin: 10px;
+}
+
+#rotate3D {
+    width: 80px;
+    height: 70px;
+    color: white;
+    position: relative;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    float: left;
+    margin-right: 50px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    background: #FF4500;
+    margin: 10px;
+}
+
+#rotate2D:hover {
+    background: #1b07ce;
+}
+
+#rotate3D:hover {
+    background: #da0545;
+}
+
+.rotation-div #rotate2D,
+.rotation-div #rotate3D,
+.rotation-div .animated_div {
+    display: inline-block;
+}
+
+.animated_div {
+    width: 90px;
+    height: 40px;
+    background: #799905;
+    color: #ffffff;
+    position: absolute;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px;
+    float: left;
+    margin: 5px;
+    -webkit-transition: -webkit-transform 1s, opacity 1s, background 1s, width 1s, height 1s, font-size 1s;
+    -webkit-border-radius: 5px;
+    -o-transition-property: width, height, -o-transform, background, font-size, opacity;
+    -o-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+    -moz-transition-property: width, height, -o-transform, background, font-size, opacity;
+    -moz-transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+    transition-property: width, height, transform, background, font-size, opacity;
+    transition-duration: 1s, 1s, 1s, 1s, 1s, 1s;
+    border-radius: 5px;
+    opacity: 0.4;
+}
+
+.animated_div:hover {
+    opacity: 1;
+    background: #1ec7e6;
+    width: 180px;
+    height: 80px;
+    font-size: 35px;
+}
+
+
+/* Float four columns side by side */
+
+.column-pro {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+
+/* Remove extra left and right margins, due to padding */
+
+.row-pro {
+    margin: 0 -5px;
+}
+
+
+/* Clear floats after the columns */
+
+.row-pro:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 600px) {
+    .column-pro {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Style the counter cards */
+
+.card-pro {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #201e1e;
+    color: #fff;
+}
+
+.card-blog h2,
+.card-blog h5 {
+    text-align: center;
+}
+
+.card-blog h2::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+.card-pro h3::first-letter {
+    color: #ff0000;
+    font-size: xx-large;
+}
+
+.card-pro h3::first-line {
+    color: #0000ff;
+    font-variant: small-caps;
+}
+
+
+/* Blog Title */
+
+
+/* Create two unequal columns that floats next to each other */
+
+
+/* Left column */
+
+.leftcolumn-blog {
+    width: 100%;
+}
+
+
+/* Fake image */
+
+.fakeimg {
+    background-color: #0d0d1daf;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+}
+
+
+/* Add a card effect for articles */
+
+.card-blog {
+    padding: 20px;
+    color: #fff;
+    background-color: #032f61;
+    /* background-image: linear-gradient(141deg, #879c93 0%, #032f61 51%, #1a91bd 75%); */
+    animation-name: example;
+    animation-duration: 15s;
+}
+
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes example {
+    from {
+        /* background-color: #270361; */
+        background-image: linear-gradient(141deg, #353f3b 0%, #032f61 51%, #270361 75%);
+    }
+    to {
+        /* background-color: #03610b; */
+        background-image: linear-gradient(141deg, #232a31 0%, #032f61 51%, #03610b 75%);
+    }
+}
+
+.project-img {
+    padding: 20px;
+    -webkit-filter: blur(3px);
+    height: 10px;
+}
+
+
+/* Standard syntax */
+
+@keyframes example {
+    from {
+        background-color: #270361;
+    }
+    to {
+        background-color: #03610b;
+    }
+}
+
+.hr {
+    background-color: #026779;
+    color: #000;
+}
+
+
+/* Clear floats after the columns */
+
+.row-blog:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Footer */
+
+.footer-blog {
+    padding: 20px;
+    text-align: center;
+    background: #000040;
+    color: #fff;
+    margin-top: 20px;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .leftcolumn-blog {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+/* Index html Style begins */
+
+
+/* Marquee code begins */
+
+.note {
+    margin: 100px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.note::first-line {
+    color: orange;
+}
+
+.inner-note {
+    color: orangered;
+}
+
+
+/* End of code */
+
+.flip-container {
+    perspective: 1000;
+}
+
+.flipper {
+    padding: 30px;
+    width: 300px;
+    height: 250px;
+    position: relative;
+    background: #f5f5f5;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+
+.front,
+.back {
+    /*background-color: rgba(0,0,0,.3);*/
+    position: absolute;
+    padding: 10px 30px;
+    top: 0;
+    left: 0;
+    right: 0;
+    backface-visibility: hidden;
+}
+
+.front {
+    z-index: 2;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.title {
+    text-align: center;
+}
+
+.flipbutton {
+    color: #4096ee;
+    text-decoration: none;
+    text-align: left !important;
+}

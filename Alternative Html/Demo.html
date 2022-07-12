@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Icon.png">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #main .navbar {
+            background: #00008b;
+        }
+        
+        .sidenav {
+            background: #191970;
+        }
+        
+        p {
+            letter-spacing: 2px;
+            font-family: Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <span class="tog" onclick="openNav()" title="Open Sidebar">&#9776; </span>
+            <h3 class="glow">Demo</h3>
+            <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">GitHub</a>
+            <div class="chip">
+                <img src="../images/id.jpg" alt="Person" width="96" height="96">
+                <a href="./View.html"> Tips.</a>
+            </div>
+        </div>
+        <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">⬆</button>
+
+        <div style="text-align:center">
+            <h2>Tips for learning Coding...</h2>
+            <p>Click to read some tips:</p>
+        </div>
+
+        <!-- Three columns -->
+        <div class="row-demo">
+            <div class="column-demo" onclick="openDemo('demo-1');" style="background:green;">
+                Tip #1: Pratice for at least 25min a day
+            </div>
+            <div class="column-demo" onclick="openDemo('demo-2');" style="background:blue;">
+                Tip #2: Try new paid Courses
+            </div>
+            <div class="column-demo" onclick="openDemo('demo-3');" style="background:red;">
+                Tip #3: Get a Mentor & Tech People
+            </div>
+        </div>
+
+        <!-- Full-width columns: (hidden by default) -->
+        <div id="demo-1" class="DemoTab" style="display:none;background:green">
+            <span onclick="this.parentElement.style.display='none'" class="closeDemo">&times;</span>
+            <h2>Tip 1</h2>
+            <p> <b>
+                The point is to try to at least do a little Pratice, every day. Even when you don’t feel like it.
+                <br> When I first started out, I had a calendar appointment set every single day, just for 25 minutes, to practice whatever book/course I was going through at the time.
+                <br> Even if the thought of cracking open said book seemed like climbing Mount Everest and impossible to do -- I told myself “just 25 minutes.” That’s it.
+                <br> Think about it -- 25 minutes is only 5/288 of your day. Or 1.7% of your day. 1.7% !!!
+            </b>
+            </p>
+        </div>
+
+        <div id="demo-2" class="DemoTab" style="display:none;background:blue">
+            <span onclick="this.parentElement.style.display='none'" class="closeDemo">&times;</span>
+            <h2>Tip 2</h2>
+            <p>
+                <b>
+                    We value things much more when we pay for them. 
+                    <br>It’s great that there’s so much free stuff online. But the fact is, paid courses/tutorials are a lot better.
+                    <br> Aside from their better quality, when you pay for something you have an incentive to follow through with it.
+                    <br> The same exact thing applies to learning how to build a website or program an application. When you pay for a course, book, tutorial, etc. — there is a much higher chance you will finish it. 
+                    <br> (In fact, I’d argue that the more you pay, the more likely you will be to finish it.) Because you need to get your money’s worth, right? Exactly.
+                    <br>So try paying for online courses because it helps in improving your knowledge
+                </b>
+            </p>
+        </div>
+
+        <div id="demo-3" class="DemoTab" style="display:none;background:red">
+            <span onclick="this.parentElement.style.display='none'" class="closeDemo">&times;</span>
+            <h2>Tip 3</h2>
+            <p>
+                <b>
+                    Join tech-based meetups in your area. Attend workshops or classes at said meetups or even through a local community college.
+                   <br> Spending time with other people in the industry, whether it’s informally at a meetup or formally in a workshop, will help broaden your horizons.
+                   <br> Finding a mentor is tough. Because you can’t just email someone and say, “ Oh hey. Mentor me? ”
+                   <br> To this day, I don’t exactly have a single “mentor”. But there are a handful of people, more experienced than me, that I talk to regularly. Some just through email. Others in person.
+                   <br> Every “mentor” has different experiences and pieces of knowledge to pass down. Some is related to coding, while others are more related to my career in general.
+                   <br> Anyways, connecting with others more experienced than you is very, very useful. I’ve learned so much from just a few people. 
+                   <br> Simple things, even—like awesome websites to visit and online courses to take.
+                    <br> Also, you never know where you may meet a mentor.
+                </b>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <button onclick="closeNav()" title="Close Sidebar">&times;</button>
+        <div id="time"></div>
+        <hr>
+        <div class="profile">
+            <img src="../images/id.jpg" alt="Developer" title="Software Engineer">
+            <h3>Idowu Adekale</h3>
+            <p>Developer 🌊</p>
+        </div>
+        <ul>
+            <li>
+                <a href="./Home.html">
+                    <span class="item"> 🏡 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Demo.html" class="active">
+                    <span class="item"> 💻 Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="./slideshow.html">
+                    <span class="item"> 🌏 Slideshow</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Projects.html">
+                    <span class="item"> 📙 My Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Index.html">
+                    <span class="item"> 📝 Form</span>
+                </a>
+            </li>
+            <li>
+                <a href="./View.html">
+                    <span class="item"> 🎥 View Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="./about.html">
+                    <span class="item"> 🏢 Profile</span>
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </div>
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlideShow Page</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Icon.png">
+    <style>
+        /* Check the other style's in Style.css File */
+        
+        body {
+            font-family: Arial;
+            margin: 0;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
+        .my-Slides img {
+            width: 100%;
+            padding: 0;
+            /* height: 700px; */
+            /* min-width: 1000px; */
+        }
+        
+        .active,
+        .demo-s:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <span class="tog" onclick="openNav()" title="Open Sidebar">&#9776; </span>
+            <h3 class="glow">SlideShow Gallery</h3>
+            <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">GitHub</a>
+            <div class="chip">
+                <img src="../images/id.jpg" alt="Person" width="96" height="96">
+                <a href="./about.html"> About</a>
+            </div>
+        </div>
+
+        <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">⬆</button>
+        <div class="container-slide">
+            <div class="my-Slides">
+                <div class="number-text">1 / 6</div>
+                <img src="../images/Main.jpg">
+            </div>
+
+            <div class="my-Slides">
+                <div class="number-text">2 / 6</div>
+                <img src="../images/Moon.jpg">
+            </div>
+
+            <div class="my-Slides">
+                <div class="number-text">3 / 6</div>
+                <img src="../images/Coding.jpg">
+            </div>
+
+            <div class="my-Slides">
+                <div class="number-text">4 / 6</div>
+                <img src="../images/Game.jpg">
+            </div>
+
+            <div class="my-Slides">
+                <div class="number-text">5 / 6</div>
+                <img src="../images/Laptop.jpg">
+            </div>
+
+            <div class="my-Slides">
+                <div class="number-text">6 / 6</div>
+                <img src="../images/Panda.jpg">
+            </div>
+
+            <a class="prev-s" onclick="plusSlides(-1)">❮</a>
+            <a class="next-s" onclick="plusSlides(1)">❯</a>
+
+            <div class="caption-container">
+                <p id="caption-s"></p>
+            </div>
+
+            <div class="row-s">
+                <div class="column-s">
+                    <img class="demo-s cursor-s" src="../images/Main.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Main">
+                </div>
+                <div class="column-s">
+                    <img class="demo-s cursor-s" src="../images/Moon.jpg" style="width:100%" onclick="currentSlide(2)" alt="Moon">
+                </div>
+                <div class="column-s">
+                    <img class="demo-s cursor-s" src="../images/Coding.jpg" style="width:100%" onclick="currentSlide(3)" alt="Coding">
+                </div>
+                <div class="column-s">
+                    <img class="demo-s cursor-s" src="../images/Game.jpg" style="width:100%" onclick="currentSlide(4)" alt="Game">
+                </div>
+                <div class="column-s">
+                    <img class="demo-s cursor-s" src="../images/Laptop.jpg" style="width:100%" onclick="currentSlide(5)" alt="Laptop">
+                </div>
+                <div class="column-s">
+                    <img class="demo-s cursor-s" src="../images/Panda.jpg" style="width:100%" onclick="currentSlide(6)" alt="Panda">
+                </div>
+            </div>
+        </div>
+        <div class="outer">
+            <img src="../images/filter.jpg" alt="filter" class="img1" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img2" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img3" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img4" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img5" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img6" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img7" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img8" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img9" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img10" width="300" height="300">
+            <img src="../images/filter.jpg" alt="filter" class="img11" width="300" height="300">
+        </div>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <button onclick="closeNav()" title="Close Sidebar">&times;</button>
+        <div id="time"></div>
+        <hr>
+        <div class="profile">
+            <img src="../images/id.jpg" alt="Developer" title="Software Engineer">
+            <h3>Idowu Adekale</h3>
+            <p>Developer 🌊</p>
+        </div>
+        <ul>
+            <li>
+                <a href="./Home.html">
+                    <span class="item"> 🏡 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Demo.html">
+                    <span class="item"> 💻 Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="./slideshow.html" class="active">
+                    <span class="item"> 🌏 Slideshow</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Projects.html">
+                    <span class="item"> 📙 My Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Index.html">
+                    <span class="item"> 📝 Form</span>
+                </a>
+            </li>
+            <li>
+                <a href="./View.html">
+                    <span class="item"> 🎥 View Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="./about.html">
+                    <span class="item"> 🏢 Profile</span>
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </div>
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("my-Slides");
+            var dots = document.getElementsByClassName("demo-s");
+            var captionText = document.getElementById("caption-s");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+    <script>
+        // Code In Main JS
+        // ################################################ Open and Close Toggle Switch code. 
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        // ########################################### Time format.
+        var myVar = setInterval(myTimer, 1000);
+
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("time").innerHTML = d.toLocaleTimeString();
+        }
+
+
+        // ############################### Github code
+        function MyGitPage() {
+            alert("You are going to Idowu Adekale Github Page!");
+        }
+        // ######################################################################## Clock html codes..
+        // ################################################################## Top button Code
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunctionBtn() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- <script src="../main.js"></script> -->
+</body>
+
+</html>

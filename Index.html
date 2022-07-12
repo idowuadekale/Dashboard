@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome | Join </title>
+    <link rel="icon" href="">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+            height: 40px;
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        /* Alignment styles */
+        
+        body,
+        html {
+            height: 100%;
+        }
+        
+        body {
+            background: #092756;
+            animation-name: example;
+            animation-duration: 30s;
+        }
+        /* Standard syntax */
+        
+        @keyframes example {
+            from {
+                background-color: #270361;
+            }
+            to {
+                background-color: #670d10;
+            }
+        }
+        
+        .type {
+            font-size: 25px;
+        }
+        
+        .type a {
+            text-decoration: none;
+        }
+        
+        #top,
+        #botttom {
+            display: inline-block;
+        }
+        
+        #bottom {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            margin-top: -80px;
+        }
+        
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <!-- <h2 class="type">
+            <a href="#" class="typewrite" data-period="2000" data-type='["Join Now"]'>
+            </a>
+        </h2> -->
+        <div class="Ball-run"></div>
+        <marquee class="note">Note: Hello! <span class="inner-note">you can check out the form login Page</span> and also the register Page</marquee>
+    </div>
+
+    <div id="bottom">
+        <div class="flip-container">
+            <div class="flipper" id="flipper">
+                <div class="front">
+                    <!-- <h1 class="title">Login</h1> -->
+                    <h2 class="type title">
+                        <a class="typewrite" data-period="2000" data-type='["Login Page"]'>
+                        </a>
+                    </h2>
+                    <form action="./Alternative Html/Home.html" autocomplete="on">
+                        <input type="email" placeholder="Enter Email" name="Email" maxlength="30" required/>
+                        <input type="password" placeholder="Password" maxlength="20" required/>
+                        <input type="submit" value="Login" />
+                        <!-- <a href="./Alternative Html/Home.html"> <input type="submit" value="Login" /></a> -->
+                    </form>
+                    <a class="flipbutton" id="loginButton" href="#">Sign Up → New User</a>
+                </div>
+
+                <div class="back">
+
+                    <h2 class="type title">
+                        <a class="typewrite" data-period="2000" data-type='["Register Page"]'>
+                        </a>
+                    </h2>
+                    <form autocomplete="on">
+                        <input type="email" placeholder="Enter Email" name="Email" maxlength="30" required/>
+                        <input type="password" placeholder="Password" maxlength="20" required/>
+                        <input type="submit" value="Sign up" formaction="./Index.html" />
+                        <!-- <a class="flipbutton" id="registerButton" href="#"> <input type="button" value="Sign up" /></a> -->
+                        <!-- <a class="flipbutton" id="registerButton" href="#"> <span onclick="SignUp()"><input type="button" value="Sign up" /><span></a> -->
+                    </form>
+
+                    <a class="flipbutton" id="registerButton" href="./Index.html">Already a User → Sign In</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Alert SinUp
+        function SignUp() {
+            alert("I am an alert box!");
+        }
+        // Form Flipping Code
+        var loginButton = document.getElementById("loginButton");
+        var registerButton = document.getElementById("registerButton");
+
+        loginButton.onclick = function() {
+            document.querySelector("#flipper").classList.toggle("flip");
+        }
+
+        registerButton.onclick = function() {
+            document.querySelector("#flipper").classList.toggle("flip");
+        }
+
+        /* START TYPEWRITER  */
+        var TxtType = function(el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtType.prototype.tick = function() {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 200 - Math.random() * 100;
+
+            if (this.isDeleting) {
+                delta /= 2;
+            }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function() {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function() {
+            var elements = document.getElementsByClassName('typewrite');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-type');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtType(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".typewrite > .wrap { border-right: 0.18em solid DodgerBlue; color:#000}";
+            document.body.appendChild(css);
+        };
+        /* END TYPEWRITER  */
+    </script>
+</body>
+
+</html>

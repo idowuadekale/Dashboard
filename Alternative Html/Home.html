@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" href="../images/Icon.png">
+</head>
+
+<body>
+    <div id="main">
+        <div class="navbar">
+            <span class="tog" onclick="openNav()" title="Open Sidebar">&#9776; </span>
+            <h3 class="glow">Dashboard</h3>
+            <a href="https://github.com/idowuadekale" target="_blank" title="My Github Page" onclick="MyGitPage()">GitHub</a>
+            <div class="chip">
+                <img src="../images/id.jpg" alt="Person" width="96" height="96">
+                <a href="./about.html"> About</a>
+            </div>
+        </div>
+        <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">&#8687</button>
+        <!-- <button onclick="topFunctionBtn()" id="myBtn" title="Go to top">&#8679</button> -->
+        <div class="Pad-slide">
+            <div class="slideshow-container">
+
+                <div class="mySlides">
+                    <q> Conquering Selfishness. - Consider others more important than yourselves.</q>
+                    <p class="author">- Philipians 2:3</p>
+                </div>
+
+                <div class="mySlides">
+                    <q> God's Plan. - Don't remember the former things, dont dwell on things past. Watch! I'm about to carry out something new.</q>
+                    <p class="author">- Isaiah 43: 18-19</p>
+                </div>
+
+                <div class="mySlides">
+                    <q> Loving God's Word. - Thy word is a lamp to my feet and a light to my path.</q>
+                    <p class="author">- Psalm 119:105</p>
+                </div>
+                <div class="mySlides">
+                    <q>Do not lose your temper - it only leads to harm.</q>
+                    <p class="author">- Psalm 37:8</p>
+                </div>
+                <div class="mySlides">
+                    <q>As for me, Justified. I will behold Thy face: when I awake, Thy presence will satisfy me.</q>
+                    <p class="author">- Psalm 17:15</p>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+            </div>
+
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+
+        <div class="pad-Table">
+            <p class="arrange"><button onclick="sortTable()">Arrange Table</button></p>
+            <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for names.." title="Type in a name">
+
+            <table id="myTable">
+                <tr class="table-top">
+                    <th>Name</th>
+                    <th>Country</th>
+                </tr>
+
+                <tr>
+                    <td>Bob Jones</td>
+                    <td>USA</td>
+                </tr>
+                <tr>
+                    <td>Royal Priest</td>
+                    <td>Nigeria</td>
+                </tr>
+                <tr>
+                    <td>Berglunds snabbkop</td>
+                    <td>Sweden</td>
+                </tr>
+                <tr>
+                    <td>North/South</td>
+                    <td>UK</td>
+                </tr>
+                <tr>
+                    <td>Adekale Idowu</td>
+                    <td>Nigeria</td>
+                </tr>
+                <tr>
+                    <td>Ola Oluwa </td>
+                    <td>Nigeria</td>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Koniglich Essen</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Magazzini Alimentari Riuniti</td>
+                    <td>Italy</td>
+                </tr>
+                <tr>
+                    <td>Paris specialites</td>
+                    <td>France</td>
+                </tr>
+                <tr>
+                    <td>Island Trading</td>
+                    <td>UK</td>
+                </tr>
+
+            </table>
+        </div>
+
+
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <button onclick="closeNav()" title="Close Sidebar">&times;</button>
+        <div id="time"></div>
+        <hr>
+        <div class="profile">
+            <img src="../images/id.jpg" alt="Developer" title="Software Engineer">
+            <h3>Idowu Adekale</h3>
+            <p>Developer &#127754</p>
+        </div>
+        <ul>
+            <li>
+                <a href="./Home.html" class="active">
+                    <span class="item"> &#127969 Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Demo.html">
+                    <span class="item"> 💻 Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="./slideshow.html">
+                    <span class="item"> &#127758 Slideshow</span>
+                </a>
+            </li>
+            <li>
+                <a href="./Projects.html">
+                    <span class="item"> &#128175 My Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="../Index.html">
+                    <span class="item"> &#128221 Form</span>
+                </a>
+            </li>
+            <li>
+                <a href="./View.html">
+                    <span class="item"> &#128293 View Mode</span>
+                </a>
+            </li>
+            <li>
+                <a href="./about.html">
+                    <span class="item"> &#127970 Profile</span>
+                </a>
+            </li>
+        </ul>
+        <hr>
+    </div>
+    <script>
+        // Additional Code
+    </script>
+
+
+    <script src="../main.js"></script>
+</body>
+
+</html>
